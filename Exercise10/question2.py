@@ -1,10 +1,10 @@
+import getpass
 
 # Create a variable to store the hard coded pin (pin to check against)
 password = 1234
 
 # Create a variable to store the inputted pin by the user
-supplied_pin = input("Enter your PIN: ")
-
+supplied_pin = getpass.getpass(prompt="Enter your PIN: ")
 
 # Create a variable to store the maximum of attempts to check pin. Set it to 3
 max_attempts = 3
@@ -19,6 +19,8 @@ while max_attempts:
         max_attempts -= 1
         print(f'Incorrect PIN. You have: {max_attempts} left')
         if max_attempts > 0:
-            supplied_pin = input("Enter your PIN: ")
+            supplied_pin = getpass.getpass(prompt="Enter your PIN: ")
         else:
             print(f'You have no attempts left. Access blocked')
+
+# why is the input still shown when typing, when we put getpass?
