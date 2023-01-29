@@ -20,3 +20,5 @@ while max_attempts:
             supplied_pin = input("Enter your PIN: ")
         else:
             print(f'You have no attempts left. Access blocked')
+
+# why is the input still shown when typing, when we put getpass?
